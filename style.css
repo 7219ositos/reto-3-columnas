@@ -1,0 +1,140 @@
+:root {
+    /* Primary Colors */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral Colors */
+/* Paragraphs */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+/* background, headings, buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+    /* Font family */
+/* ? */
+    --font-family-400: 'Lexend Deca', sans-serif;
+/* ? */
+    --font-family-700: 'Big Shoulders Display', cursive;
+    /* Font weight */
+/* 400 */
+    --weight-400: 400;
+/* 700 */
+    --weight-700: 700;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 55px 15px;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cont_of_conts {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    padding: 40px 40px 30px 40px;
+    margin: 0px;
+    width: auto;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.img_div {
+    display: inline-block;
+}
+
+.title {
+    padding: 0px 40px 30px 40px;
+    margin:0px;
+    font-family: var(--font-family-700);
+    font-weight: var(--weight-700);
+    color: var(--very-light-gray);
+}
+
+.p {
+    padding: 0px 40px;
+    margin: 0px 0px 10px 0px;
+    font-family: var(--font-family-400);
+    font-weight: var(--weight-400);
+    color: var(--transparent-white);
+}
+
+.btn {
+    margin: 20px 40px 40px 40px;
+    border: 0px;
+    border-radius: 50px;
+    padding: 15px 35px;
+    background-color: var(--very-light-gray);
+    cursor: pointer;
+}
+
+.sed {
+    color: var(--bright-orange);
+}
+
+.suv {
+    color: var(--dark-cyan);
+}
+
+.lux{
+    color: var(--very-dark-cyan);
+}
+
+.cont_sedans {
+    background-color: var(--bright-orange);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cont_suvs {
+    background-color: var(--dark-cyan);
+}
+
+.cont_luxury {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.sed:active {
+    background-color: var(--bright-orange);
+}
+
+.suv:active {
+    background-color: var(--dark-cyan);
+}
+
+.lux:active {
+    background-color: var(--very-dark-cyan);
+}
+
+.btn:active {
+    color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    margin: 18px 38px 38px 38px;
+}
+
+@media (min-width:768px) {
+    .cont_of_conts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.75fr;
+    }
+    .cont_luxury {
+        grid-row: 2;
+        grid-column: span 2;
+        padding: 10px 20px 20px 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .cont_of_conts{
+        display: flex;
+        flex-direction: row;
+    }
+}
